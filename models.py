@@ -67,7 +67,7 @@ class ResNet(nn.Module):
         )
         self.maxpool = nn.MaxPool2d((3, 3), 2)
 
-        self.conv2 = self.make_layers(block, 64, repeat[0], 2)
+        self.conv2 = self.make_layers(block, 64, repeat[0], 1)
         self.conv3 = self.make_layers(block, 128, repeat[1], 2)
         self.conv4 = self.make_layers(block, 256, repeat[2], 2)
         self.conv5 = self.make_layers(block, 512, repeat[3], 2)
