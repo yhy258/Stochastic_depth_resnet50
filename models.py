@@ -61,7 +61,7 @@ class ResNet(nn.Module):
 
         self.inplane = inplane
         self.conv1 = nn.Sequential(
-            nn.Conv2d(3, self.inplane, 3, padding=1, stride=2),
+            nn.Conv2d(3, self.inplane, 7, padding=1, stride=2),
             nn.BatchNorm2d(self.inplane),
             nn.ReLU()
         )
